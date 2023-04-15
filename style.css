@@ -1,0 +1,309 @@
+
+
+body{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    background-size: cover;
+    background-position-x: -3px;
+    background-position-y: -150px;
+ 
+    
+    
+   
+ }
+ .grid{
+     display: grid;
+     grid-template-columns: repeat(5,1fr);
+          
+ }
+ .header{
+     grid-column: 1/6;
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     align-items: center ;
+     padding-top: 10px;
+     margin-top: 5px;
+     height: 40px;
+     font-size: 40px;
+     margin-top: 20px;
+     text-shadow:
+     0 0 5px black,
+     0 0 5px black;
+     color: white;
+     
+ 
+  }
+ 
+  .input{
+     grid-column: 1/6;
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     height: 60px;
+     padding-top: 40px;
+  }
+  .weather{
+     grid-column: 1/6;
+     display:flex;
+     flex-direction: row;
+     justify-content: center;
+     padding-top: 20px;
+     height: 300px;
+     gap: 150px;  
+     width: max-content;
+     position:relative;
+     left: 400px;
+     padding: 15px;
+     bottom: 10px;
+     padding-top: 10px;
+     border-radius: 10px;
+    
+ 
+    
+  }
+  .weather-1{
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     margin-bottom: 20px;
+     
+     
+     
+  }
+  .weather-2{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     gap: 15px;
+   margin-top: 10px;
+ }
+  
+  .sub-weather{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     gap: 10px;
+  }
+  .forecast{
+     grid-column: 1/6;
+     display: flex;
+     flex-direction: row;
+     text-shadow:
+     0 0 20px #fff;
+     margin-top: 40px;
+     font-size: 25px;
+  }
+ footer{
+     grid-column: 1/6;
+     position: absolute;
+     left: 0;
+     bottom: 0;
+     height: 30px;
+     width: 100%;
+     overflow: hidden;
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     padding-top: 5px;
+     padding-bottom: 10px;
+     gap: 10px;
+     color: black;
+     align-items: center;
+     gap: 10px;
+     font-size: 20px;
+     font-weight: 500;
+     
+ }
+ .forecast{
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     gap: 60px;
+     padding: 20px;
+     margin-top: 65px;
+    
+ }
+ .forecastday{
+     gap: 50px;
+ }
+ .forecastday-position{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+ }
+ .content-1{
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     gap: 10px;
+ }
+ .weather-icon{
+     width: 100px;
+     height: 100px;
+     padding-top: 80px;
+     position: absolute;
+     top: 50px;
+     left:150px;
+     visibility: hidden;
+     
+ }
+ .location{
+     height: 30px;
+     width: 300px;
+ }
+ #submit-button{
+     height: 35px;
+     width: 100px;   
+     border-radius: 5%;
+     cursor: pointer;
+     color:black;
+     background-color: orange;
+     font-weight: 450;
+   
+ }
+ #submit-button:hover{
+     background-color:#ff8c00 ;
+ }
+ 
+ .search-icon{
+    background-image: url(imgs/cloudy-day-1.svg);
+    position: relative;
+    right: 30px;
+    left: 20px;
+    bottom: 8px;
+    width: 50px;
+    height: 45px;
+ }
+ .humidity-icon{
+     background-image: url(imgs/icons8-wet-40.png);
+     width: 40px;
+     height: 40px;
+     visibility: hidden;
+ }
+ .wind-icon{
+     background-image: url(imgs/icons8-wind-40.png);
+     width: 40px;
+    height: 40px;
+    visibility: hidden;
+ }
+ .sub-weather-1{
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     gap: 10px;
+ }
+ .sub-weather-2{
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     gap: 10px;
+ }
+ .humid{
+     font-size: 35px;
+     font-weight: 400;
+ }
+ .wind{
+     font-size: 35px;
+     font-weight: 400;
+      
+ }
+ .cityname{
+     font-size: 40px;
+     font-weight: 600;
+ }   
+ .country{
+     font-size:40px;
+     font-weight:600;
+ }
+ .temp{
+     font-size: 55px;
+     font-weight: 300;
+     position: relative;
+     left: 10px;
+ }
+ .condition{
+     font-size: 35px;
+     font-weight: 400;
+     margin-bottom: 10px;
+ }
+ 
+ hr {
+     
+     clear:both;
+     display:block;
+     width: 70%;               
+     background-color:black;
+     height: 1px;
+     position: absolute;
+     top: 65%;
+     left: 15%;
+   
+   }
+   .day-temp{
+     font-size: 20px;
+     font-weight: 500;
+     margin-top: 10px;
+   }
+ .day{
+     margin-top: -40px;
+     margin-bottom: 10px;
+     font-weight: 600;
+ }
+ 
+ 
+ /* snow effect-----*/
+ /* customizable snowflake styling */
+ .snowflake {
+     color: #fff;
+     font-size: 1em;
+     font-family: Arial;
+     text-shadow: 0 0 1px #000;
+   }
+   
+   @-webkit-keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@-webkit-keyframes snowflakes-shake{0%{-webkit-transform:translateX(0px);transform:translateX(0px)}50%{-webkit-transform:translateX(80px);transform:translateX(80px)}100%{-webkit-transform:translateX(0px);transform:translateX(0px)}}@keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@keyframes snowflakes-shake{0%{transform:translateX(0px)}50%{transform:translateX(80px)}100%{transform:translateX(0px)}}.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default;-webkit-animation-name:snowflakes-fall,snowflakes-shake;-webkit-animation-duration:10s,3s;-webkit-animation-timing-function:linear,ease-in-out;-webkit-animation-iteration-count:infinite,infinite;-webkit-animation-play-state:running,running;animation-name:snowflakes-fall,snowflakes-shake;animation-duration:10s,3s;animation-timing-function:linear,ease-in-out;animation-iteration-count:infinite,infinite;animation-play-state:running,running}.snowflake:nth-of-type(0){left:1%;-webkit-animation-delay:0s,0s;animation-delay:0s,0s}.snowflake:nth-of-type(1){left:10%;-webkit-animation-delay:1s,1s;animation-delay:1s,1s}.snowflake:nth-of-type(2){left:20%;-webkit-animation-delay:6s,.5s;animation-delay:6s,.5s}.snowflake:nth-of-type(3){left:30%;-webkit-animation-delay:4s,2s;animation-delay:4s,2s}.snowflake:nth-of-type(4){left:40%;-webkit-animation-delay:2s,2s;animation-delay:2s,2s}.snowflake:nth-of-type(5){left:50%;-webkit-animation-delay:8s,3s;animation-delay:8s,3s}.snowflake:nth-of-type(6){left:60%;-webkit-animation-delay:6s,2s;animation-delay:6s,2s}.snowflake:nth-of-type(7){left:70%;-webkit-animation-delay:2.5s,1s;animation-delay:2.5s,1s}.snowflake:nth-of-type(8){left:80%;-webkit-animation-delay:1s,0s;animation-delay:1s,0s}.snowflake:nth-of-type(9){left:90%;-webkit-animation-delay:3s,1.5s;animation-delay:3s,1.5s}
+   /* Demo Purpose Only*/
+   .demo {
+     font-family: 'Raleway', sans-serif;
+       color:#fff;
+       display: block;
+       margin: 0 auto;
+       padding: 15px 0;
+       text-align: center;
+   }
+   .demo a{
+     font-family: 'Raleway', sans-serif;
+   color: #000;		
+   }
+ 
+ 
+ /* loader */
+ .lds-dual-ring {
+    display: block;
+     width: 80px;
+     height: 80px;
+     position: relative;
+    top: 300px;
+     left: 50%;
+   }
+   .lds-dual-ring:after {
+     content: " ";
+     display: block;
+     width: 64px;
+     height: 64px;
+     margin: 8px;
+     border-radius: 50%;
+     border: 6px solid black;
+     border-color: black transparent black transparent;
+     animation: lds-dual-ring 1.2s linear infinite;
+   }
+   @keyframes lds-dual-ring {
+     0% {
+       transform: rotate(0deg);
+     }
+     100% {
+       transform: rotate(360deg);
+     }
+   }

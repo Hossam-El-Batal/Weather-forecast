@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    
+    
+    <link rel="stylesheet" href="style.css" />
+    <title>Weather</title>
+  </head>
+  <body>
+    <div class="lds-dual-ring"></div>
+    <div class="grid">
+      <div class="header">
+        <div>Weather Forecast</div>
+        <div class="search-icon"></div>
+      </div>
+      <div class="input">
+        <form>
+          <input type="text" class="location" placeholder="Enter city.." />
+          <button type="button"  class="fa fa-search" id="submit-button">  Search</button>
+        </form>
+      </div>
+
+      <div class="weather">
+
+        <div class="weather-1">
+          <div class="sub-weather">
+            <div class="cityname"></div>
+            <div class="country"></div>
+            <div class="temp"></div>
+            <div class="condition"></div>
+          </div>
+          <img class="weather-icon" />
+        </div>
+        <div class="weather-2">
+          <div class="sub-weather-1">
+            <div class="humid"></div>
+            <div class="humidity-icon"></div>
+          </div>
+          <div class="sub-weather-2">
+            <div class="wind"></div>
+            <div class="wind-icon"></div>
+          </div>
+        </div>
+      </div>
+    <hr>
+
+      <div class="forecast"></div>
+
+      <footer class="footer">
+        <div>Made by Hossam Heroe</div>
+        <a href="https://github.com/Mediveh1" target="_blank"> <img src="iconmonstr-github-1.svg" class="footer-icon"  ></a>
+        
+      </footer>
+    </div>
+    <!--Animations-->
+    <div class="snowflakes" aria-hidden="true"></div>
+    
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </body>
+</html>

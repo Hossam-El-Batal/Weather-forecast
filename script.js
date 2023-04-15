@@ -114,7 +114,7 @@ fetch(`https://api.ipify.org?format=json`)
     return response.json();
   })
   .then((data) => {
-    fetch(`http://ip-api.com/json/${data.ip}`)
+    fetch(`https://ip-api.com/json/${data.ip}`)
       .then((res) => {
         return res.json();
       })

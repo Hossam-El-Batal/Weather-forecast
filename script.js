@@ -106,20 +106,6 @@ function render(city) {
       }
     });
 }
-// //fetching ip of the user
-// fetch(`https://api.ipify.org?format=json`)
-//   .then((response) => {
-//     return response.json();
-//   })
-//   .then((data) => {
-//     fetch(`https://ip-api.com/json/${data.ip}`)
-//       .then((res) => {
-//         return res.json();
-//       })
-//       .then((r) => {
-//         render(r.city);
-//       });
-//   });
 //ip geolocation
 
 fetch(

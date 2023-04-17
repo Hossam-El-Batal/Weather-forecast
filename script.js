@@ -82,8 +82,6 @@ function render(city) {
     })
     .then((response) => {
       document.querySelector(".weather-icon").style.visibility = "visible";
-      document.querySelector(".humidity-icon").style.visibility = "visible";
-      document.querySelector(".wind-icon").style.visibility = "visible";
 
       if (response.current.is_day == 1) {
         document.getElementsByTagName("body")[0].style.backgroundImage =
@@ -108,21 +106,36 @@ function render(city) {
       }
     });
 }
+// //fetching ip of the user
+// fetch(`https://api.ipify.org?format=json`)
+//   .then((response) => {
+//     return response.json();
+//   })
+//   .then((data) => {
+//     fetch(`https://ip-api.com/json/${data.ip}`)
+//       .then((res) => {
+//         return res.json();
+//       })
+//       .then((r) => {
+//         render(r.city);
+//       });
+//   });
+//ip geolocation
 
-fetch(`https://api.ipify.org?format=json`)
+fetch(
+  `https://api.ipgeolocation.io/ipgeo?apiKey=62fc8bd8119644e794709cccfbde61c8&ip=1.1.1.1`,
+  {
+    mode: "cors",
+  }
+)
   .then((response) => {
     return response.json();
   })
-  .then((data) => {
-    fetch(`https://ip-api.com/json/${data.ip}`)
-      .then((res) => {
-        return res.json();
-      })
-      .then((r) => {
-        render(r.city);
-      });
+  .then((response) => {
+    render(response.city);
   });
 
+//forecaste divs
 const createForcastDiv = (day, data) => {
   const newDiv = document.createElement("div");
   newDiv.classname = "forecastday";
@@ -135,14 +148,12 @@ const createForcastDiv = (day, data) => {
         `;
   return newDiv;
 };
-
+//updated values for the current city
 const updateValues = (response) => {
-  cityName.innerHTML = `${response.location.name},`;
-  countryName.innerHTML = `${response.location.country}`;
+  cityName.innerHTML = `${response.location.name}, ${response.location.country}`;
+
   temperature.innerHTML = ` ${response.current.temp_c}&#176;`;
   weatherIcon.src = response.current.condition.icon;
   weatherCondition.innerHTML = `${response.current.condition.text}`;
-  humidity.innerHTML = `Humidity: ${response.current.humidity}%`;
-  windCondition.innerHTML = `Wind: ${response.current.wind_mph} mph`;
   forcastDiv.innerHTML = "";
 };

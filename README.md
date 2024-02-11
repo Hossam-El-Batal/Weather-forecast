@@ -16,3 +16,7 @@
 ## Visual example
 
 https://github.com/Mediveh1/Weather-forecast/assets/122058294/79618dd5-71ab-473b-8c9a-754b9ecb7cb1
+
+## Ongoing updates 
+
+* Make the page responsive for different screens

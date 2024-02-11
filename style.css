@@ -206,12 +206,12 @@ hr {
     
     clear:both;
     display:block;
-    width: 70%;               
+    width: 35%;
     background-color:black;
     height: 1px;
     position: absolute;
-    top: 65%;
-    left: 15%;
+    top: 55%;
+    left: 33%;
   
   }
   .day-temp{

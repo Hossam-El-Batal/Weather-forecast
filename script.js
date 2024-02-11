@@ -1,6 +1,7 @@
 let inputLocation = document.querySelector(".location");
 var submitButton = document.querySelector("#submit-button");
 var forcastDiv = document.querySelector(".forecast");
+
 // data variable selectors
 var cityName = document.querySelector(".cityname");
 var countryName = document.querySelector(".country");
@@ -106,6 +107,7 @@ function render(city) {
       }
     });
 }
+
 //ip geolocation
 
 fetch(
@@ -121,7 +123,7 @@ fetch(
     render(response.city);
   });
 
-//forecaste divs
+//forecast divs
 const createForcastDiv = (day, data) => {
   const newDiv = document.createElement("div");
   newDiv.classname = "forecastday";
@@ -134,6 +136,7 @@ const createForcastDiv = (day, data) => {
         `;
   return newDiv;
 };
+
 //updated values for the current city
 const updateValues = (response) => {
   cityName.innerHTML = `${response.location.name}, ${response.location.country}`;
